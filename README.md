@@ -67,8 +67,8 @@ PGP_PASSPHRASE=very_secret_passphrase
 ```
 
 
-**Django Services (djangoBackend/auth-service/.env, djangoBackend/create-service/.env, djangoBackend/read-service/.env, 
-djangoBackend/update-service/.env, djangoBackend/delete-service/.env):**
+**Django Services (`djangoBackend/auth-service/.env`, `djangoBackend/create-service/.env`, `djangoBackend/read-service/.env`, 
+`djangoBackend/update-service/.env`, `djangoBackend/delete-service/.env`):**
 ```env
 DB_HOSTNAME=127.0.0.1
 DB_USERNAME=root
@@ -77,17 +77,17 @@ DB_NAME=rapidproject
 DB_PORT=3306
 ```
 
-and then:
-**-> backend/api-gateway/utils**
+### 2. Environment Configuration
+**`backend/api-gateway/utils`**
 node generatePgpKeys.js
 
 copy the server_public.asc and paste it in the public folder of react (frontend/public)
 
-**-> backend/api-gateway**
+**`backend/api-gateway`**
 npm i
 nodemon index.js
 
-**-> djangoBackend/auth-service**
+**`djangoBackend/auth-service`**
 py -m venv venv
 venv/Scripts/activate
 install the dependancies until your pip list looks like this:
@@ -112,7 +112,7 @@ tzdata              2025.2
 py manage.py runserver 4005
 ```
 
--> djangoBackend/create-service
+**djangoBackend/create-service**
 py -m venv venv
 venv/Scripts/activate
 install the dependancies until your pip list looks like this:

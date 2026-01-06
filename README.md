@@ -235,7 +235,8 @@ and then do
 py manage.py runserver 4003
 ```
 
--> frontend
+**`frontend`**
+```
 npm i
 npm run dev
-
+```

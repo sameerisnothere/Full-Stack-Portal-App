@@ -118,12 +118,13 @@ tzdata              2025.2
 py manage.py runserver 4005
 ```
 
-**`djangoBackend/create-service**
+**`djangoBackend/create-service`**
 ```
 py -m venv venv
 venv/Scripts/activate
 ```
 install the dependancies until your pip list looks like this:
+```
 Package             Version
 ------------------- ----------
 anyio               4.11.0
@@ -145,7 +146,11 @@ python-dotenv       1.2.1
 sniffio             1.3.1
 sqlparse            0.5.3
 tzdata              2025.2
+```
+and then do
+```
 py manage.py runserver 4001
+```
 
 **`djangoBackend/read-service`**
 ```
@@ -153,6 +158,7 @@ py -m venv venv
 venv/Scripts/activate
 ```
 install the dependancies until your pip list looks like this:
+```
 Package             Version
 ------------------- -------
 asgiref             3.11.0
@@ -163,7 +169,11 @@ PyMySQL             1.1.2
 python-dotenv       1.2.1
 sqlparse            0.5.3
 tzdata              2025.2
+```
+and then do
+```
 py manage.py runserver 4002
+```
 
 **`djangoBackend/update-service`**
 ```
@@ -171,6 +181,7 @@ py -m venv venv
 venv/Scripts/activate
 ```
 install the dependancies until your pip list looks like this:
+```
 Package             Version
 ------------------- ----------
 anyio               4.12.0
@@ -188,7 +199,11 @@ PyMySQL             1.1.2
 python-dotenv       1.2.1
 sqlparse            0.5.4
 tzdata              2025.2
+```
+and then do
+```
 py manage.py runserver 4004
+```
 
 **`djangoBackend/delete-service`**
 ```
@@ -196,6 +211,7 @@ py -m venv venv
 venv/Scripts/activate
 ```
 install the dependancies until your pip list looks like this:
+```
 Package             Version
 ------------------- ----------
 anyio               4.11.0
@@ -213,7 +229,11 @@ python-dotenv       1.2.1
 sniffio             1.3.1
 sqlparse            0.5.3
 tzdata              2025.2
+```
+and then do
+```
 py manage.py runserver 4003
+```
 
 -> frontend
 npm i

@@ -77,19 +77,25 @@ DB_NAME=rapidproject
 DB_PORT=3306
 ```
 
-### 2. Environment Configuration
+### 2. Installation & Execution
 **`backend/api-gateway/utils`**
+```
 node generatePgpKeys.js
 
 copy the server_public.asc and paste it in the public folder of react (frontend/public)
+```
 
 **`backend/api-gateway`**
+```
 npm i
 nodemon index.js
+```
 
 **`djangoBackend/auth-service`**
+```
 py -m venv venv
 venv/Scripts/activate
+```
 install the dependancies until your pip list looks like this:
 ```
 Package             Version
@@ -112,9 +118,11 @@ tzdata              2025.2
 py manage.py runserver 4005
 ```
 
-**djangoBackend/create-service**
+**`djangoBackend/create-service**
+```
 py -m venv venv
 venv/Scripts/activate
+```
 install the dependancies until your pip list looks like this:
 Package             Version
 ------------------- ----------
@@ -139,9 +147,11 @@ sqlparse            0.5.3
 tzdata              2025.2
 py manage.py runserver 4001
 
--> djangoBackend/read-service
+**`djangoBackend/read-service`**
+```
 py -m venv venv
 venv/Scripts/activate
+```
 install the dependancies until your pip list looks like this:
 Package             Version
 ------------------- -------
@@ -155,9 +165,11 @@ sqlparse            0.5.3
 tzdata              2025.2
 py manage.py runserver 4002
 
--> djangoBackend/update-service
+**`djangoBackend/update-service`**
+```
 py -m venv venv
 venv/Scripts/activate
+```
 install the dependancies until your pip list looks like this:
 Package             Version
 ------------------- ----------
@@ -178,9 +190,11 @@ sqlparse            0.5.4
 tzdata              2025.2
 py manage.py runserver 4004
 
--> djangoBackend/delete-service
+**`djangoBackend/delete-service`**
+```
 py -m venv venv
 venv/Scripts/activate
+```
 install the dependancies until your pip list looks like this:
 Package             Version
 ------------------- ----------

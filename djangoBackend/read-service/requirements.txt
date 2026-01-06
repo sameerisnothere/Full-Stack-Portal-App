@@ -1,0 +1,7 @@
+Django==4.2
+djangorestframework==3.16.1
+PyMySQL==1.1.2
+python-dotenv==1.2.1
+sqlparse==0.5.3
+asgiref==3.11.0
+tzdata==2025.2

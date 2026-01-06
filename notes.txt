@@ -1,0 +1,95 @@
+tables: admin(name, email, password, phone, cnic, status, gender, isDeleted), student(name, email, password, phone, cnic, status, gender, isDeleted), teacher(name, email, password, phone, cnic, status, gender, isDeleted), course(name, teacherId, credit_hours, isDeleted), enrollment(courseId, StudentId),
+token(user_id
+,user_type
+,token
+,created_at
+,expires_at
+)
+
+
+i have a backend microservices architecture in nodejs. i have insert, delete, update, delete and authentication services and a gateway, 
+each on a different route. im using mysql. apart from the gateway and authentication services, each of the services have only one route. 
+i am making a student management system with student(name, email, password, phone, cnic, status, gender, isDeleted),
+teacher(name, email, password, phone, cnic, status, gender, isDeleted), course(name, teacherId, credit_hours, isDeleted),
+enrollment(studentId, courseId) and admin(name, email, password, phone, cnic, status, gender, isDeleted). my authentication is stateful token 
+authentication using JWT with the token and its user stored in the db. gateway is in nodejs and the rest of the services in django.
+
+authentication flow: login->token generated->token stored in db->api call made on CRUD route->checkAuth middleware sent with 
+each CRUD req->checkAuth calls /me route with token->
+/me decodes token and returns logged in user->checkAuth stores current user in x-user header and req.user->auth checkedd!!!->
+req now successfully sent to CRUD route with headers(that contain authorization and x-user)->current user can be got from headers["x-user"]
+or req.user in protected CRUD controller.
+
+
+template:
+https://github.com/ed-roh/react-admin-dashboard
+
+
+changes:
+login page should not reload
+duplicate cnic, phone
+duplicate course name
+inactive users dont login
+multiple enrollments
+course should not be deleted if it has enrollments
+teacher should not be deleted if it has courses
+fix validation for delete user etc.
+inactive courses dont show up in app.
+teacher, student dashboards
+validation in update
+isDeleted in table fix
+encryption for axios requests
+validation error messages 
+login password regex
+forms name regex(cannot include number)
+passwords not sent to frontend
+parametrize the sql injections
+student enroll page refresh fix
+box shadow to all papers
+breadcrumbs fix (almost done)
+change encryption to use public key encryption instead
+update service
+delete service
+add profile page for all types.
+
+in django:
+throttling
+mixins
+loggers
+authentication (done using jwt)
+serializers validation
+
+serialization deserialization in js
+spread operator js
+rest operator js
+context processes (django templates)
+for throttling, customise the user throttle.
+build the react project
+redux
+make more components
+middleware in django
+course form component and general course page components
+dunder functions
+implement pgp to encrypt frontend payload. remove backend payload encryption.
+
+"sameer"
+("sameer")
+("sameer",)
+["sameer"]
+
+
+**api requests made twice by frontend due to strict mode
+**read response not encrypted as it is also being called inside the other microservices
+
+
+django:
+after installing django and drf,
+
+start django project like this: django-admin startproject auth_service ./
+
+create service app like this: py manage.py startapp authenticationserv
+
+paste in the models file
+
+to serve the react build locally:
+serve -s dist -p 5173

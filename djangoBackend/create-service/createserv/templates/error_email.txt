@@ -1,0 +1,8 @@
+Error in MyProject
+
+Subject: {{ subject }}
+
+Error:
+{{ message }}
+
+(This is the text version of the custom email.)
